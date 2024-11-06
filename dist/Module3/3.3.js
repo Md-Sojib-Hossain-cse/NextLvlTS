@@ -12,4 +12,21 @@
     };
     console.log(add(2, 4));
     console.log(add("3", 4));
+    const getUser = (user) => {
+        if ("role" in user) {
+            console.log(`I'm ${user.name} and my role is ${user.role}.`);
+        }
+        else {
+            console.log(`I'm ${user.name} and my role is user.`);
+        }
+    };
+    const normalUser = {
+        name: "Sojib",
+    };
+    const adminUser = {
+        name: "Ariful",
+        role: "admin",
+    };
+    getUser(normalUser);
+    getUser(adminUser);
 }
